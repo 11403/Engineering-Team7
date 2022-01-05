@@ -4,8 +4,13 @@
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
+    overflow: auto; 
+    
 }
-
+*::selection { 
+background: navy; 
+color: orange;
+}
 html {
     background-color: lightpink; 
 }
@@ -14,7 +19,10 @@ body {
     background-color: rgb(255, 255, 255); 
     font-family: 'Atkinson Hyperlegible', sans-serif;
     font-size: calc(1vw + 1vh);
-    font-weight: 100;
+    font-weight: 100; 
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
 }
 
 main { 
@@ -23,15 +31,141 @@ main {
 
 #title{
     background-color: navy; 
-    color:white;
-    font-size: 18;
-    font-family:'Atkinson Hyperlegible', sans-serif;
+    color:white; 
     text-align: center;
+    /* 1em = 100% */ 
+    font-size: 2em; 
+    text-shadow: 0.02em 0.02em orange;
     
+}
+#title:hover{
+    color: orange;
+    text-shadow: 0.02em 0.02em white;
+    font-size: 3em; 
 }
 footer{
     background-color: navy;
     color: white;
     text-align: center;
-    margin-top: 100%;
 }
+header{
+    width: 100%;
+    background-color: orange;
+}
+nav{
+    background-color: orange;
+}
+
+button{
+    height: 3.8em;
+    width: 5.5em;
+    border:none;
+    background-color: white;
+    margin-left: 30% ;
+   
+}
+.navbutton:hover{
+   background-color: navy;
+   color: white;
+   
+}
+a.portfolioActive{
+    font-weight: bold;
+    font-style: italic;
+}
+a.homeActive{
+    font-weight: bold;
+    font-style: italic;
+}
+a{
+   
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+
+/* 
+body {
+    background-color: rgb(238, 237, 237);
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    /* min-height: 100vh; *
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4vw;
+    overflow-x: hidden;
+  }
+  
+  .mainbody {
+    position: relative;
+    width: 100%;
+    /*background-color: yellow;*
+    padding: 0.5rem;
+    overflow: visible;
+  }
+  
+  .mainbody > section {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 1em;
+    margin: 5%;
+    background-color: rgba(37, 204, 37, 0.39);
+    /* background-color: rgb(144, 167, 135); */
+    /* line-height: calc(1.38em);  ---- OH My god that did a lot of damage*
+  } */ 
+  
+  
+
+/*store owners profile and profile box which includes texts*/
+#boxBox{
+    height : auto;
+    width : auto;
+    background-color: whitesmoke;
+    text-overflow: break;
+}
+#profileOne {
+    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+    margin: 0 auto;
+
+} 
+
+#boxTwo{
+    height : auto;
+    width : auto;
+    background-color: whitesmoke;
+    text-overflow: break;
+}
+#profileTwo {
+    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;    
+    margin: 0 auto;
+
+} 
+  /*working on navigatin buttons
+  header{
+      width: 100%;
+      background-color: orange;
+  }
+  button{
+      background-color: white;
+      border: none;
+      color: black;
+      height: max-height;
+      borderborder-radius: 5px;
+  }
+  */
+  /*working on porfolio page services description */
+  .aboutProject{
+      background-color: whitesmoke;
+      border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+ 
+    }
+ .projectProgressImage{
+     border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+     border: none;
+ }
+ button.navButton{
+    color: aqua;
+ }
