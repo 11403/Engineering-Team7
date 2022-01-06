@@ -3,7 +3,7 @@
         <title>SWS-Portfolio</title>
         <link rel="icon" href="images/placeholder.png"><!--tab logo-->
         <link rel="stylesheet" href="/css/style.css">
-    </head>
+    </head> 
     <body>
         <a href="index.html">
             <div class="title" id="title">
@@ -12,13 +12,26 @@
                 <span id="phoneNumber">000-000-0000</span>
             </div></a>
         <br>
-        <div class="aboutProject">
-            
-            <img src="" alt="" height="100px" width="100px" class="projectProgressImage">
-            <span class="projectDescription">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis adipisci, iste soluta quod nam qui tempore eaque. Sequi doloremque, quod ex reiciendis dolorem quidem minima porro vero, sit ab debitis!</span>
+        
+       <div>
+        <button type="button" class="collapsible">Project 001</button>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img src="/images/placeholder.png" alt="" height="50px" width="50px">
         </div>
+    </div>
+    <br>
+    <div>
+        <button type="button" class="collapsible">Project 002</button>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img src="/images/placeholder.png" alt="" height="50px" width="50px">
+        </div>
+    </div>
+        
+          
         <br>
+
         <div class="aboutProject">
             <img src="" alt="" height="100px" width="100px"  class="projectProgressImage">
             <div style="float: right;" width="1340">
@@ -47,5 +60,21 @@
 
         <footer> <small>&copy; Copyright 2018, SOWARD WELDING SOLUTIONS</small> </footer> 
     </body>
-    
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script> 
 </html>
