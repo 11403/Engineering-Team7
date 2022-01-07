@@ -5,7 +5,6 @@
     padding: 0; 
     box-sizing: border-box; 
     overflow: auto; 
-    
 }
 
 /*
@@ -16,11 +15,11 @@ color: orange;
 */ 
 
 html {
-    background-color: lightpink; 
+    background-color: white; 
 }
 
 body { 
-    background-color: rgb(255, 255, 255); 
+    background-color: white; 
     font-family: 'Atkinson Hyperlegible', sans-serif;
     font-size: calc(1vw + 1vh);
     /* font-weight: 100; */  
@@ -28,20 +27,33 @@ body {
     max-width: 100%;
     height: 100vh;
     position: relative; 
+    
 }
 
 .titleBox{
-    background-color: navy; 
-    color:white; 
+    background-color: #1351d8; 
+    color:whitesmoke;
     text-align: center;
     padding: 2%; 
+    font-family: 'Atkinson Hyperlegible', sans-serif;
     /* 1em = 100% */ 
-    /* text-shadow: 0.02em 0.02em orange; */ 
+    /* text-shadow: 0.02em 0.02em orange; // for pc view*/ 
 }
+#titleA:hover{
+    cursor: pointer;
+    color:white;
+    text-shadow: 3px 1px black;
+    transition: 2s;
+    
+}
+
+
+
 
 #titleA { 
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1.30em;
+    
 }
 
 .titleB { 
@@ -50,30 +62,108 @@ body {
     display: inline-block;
 }
 
+#mainBody { 
+    background-color: white; 
+    height: 100%; 
+}
 .mainBox { 
-    background-color: orange; 
-    width: 46%; 
-    margin: 2% 2%; 
-    padding: 2.5%; 
+    background-color: white; 
+    box-shadow: 0 5px 10px lightgray;
+    position: relative;
     display: inline-block; 
-    height:  80%; 
+    width: 90%; 
+    margin: 2.5% 5%; 
+    padding: 2.5%; 
+    border-radius: 1%;
+   
+}
+.mainBox:hover{
+    background-color: white; 
+    box-shadow: 0 5px 10px black;
+    transition: 2s;
+    
+    
 }
 
-#rightMainBody { 
+.profile {   
+    background-color: white; 
+    position: relative;
+    width: 60%; 
+    padding: 2.5%; 
+    transform: translate(-50%, 0%); 
+    left: 50%; 
+    margin: 1.5% 0; 
+}
+
+#rightMainBox { 
     float: right; 
 }
 
-/*#title:hover{
-    color: orange;
-    text-shadow: 0.02em 0.02em white;
-    font-size: 3em; 
-}*/
-/*
-footer{
-    background-color: navy;
+.subTitleA { 
+    /* 
+    text-decoration: underline;
+    font-style:italic; 
+    letter-spacing: 3px;
+    filter: drop-shadow(100%); 
+    */ 
+    
+    text-align: center; 
+    text-shadow: 1px 1px black;
+    font-weight: normal; 
+    
+}
+
+.bodyText { 
+    text-indent: 5%;
+    padding: 0 2%; 
+    margin: 2% 0; 
+}
+
+.bottom { 
+    background-color: white; 
+    /*height: 12.5%;*/ 
+    width: 100%;   
+}
+
+.nav { 
+    display: flex;  
+    flex-flow: row;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 2%; 
+}
+
+.nav > input{ 
+    font-size: 1.5em;  
+    border-radius: 5%;
+    padding: 2.5% 8%; 
+    width: 40%; 
+}
+
+
+footer.bottomBar {
+    background-color: rgb(19, 81, 216, 2);
+    position: absolute;
+    width: 100%;
+    padding: 0.5%; 
+    bottom: 0; 
+    right: 0; 
     color: white;
     text-align: center;
+    font-family: arial;
 }
+
+.spacer { 
+    position: relative; 
+    width: 100%; 
+    height: 4%; 
+    z-index: -1;
+}
+
+
+
+/* 
 header{
     width: 100%;
     background-color: orange;
@@ -110,42 +200,9 @@ a{
 a:hover{
     color: white;
 }
-*/ 
-/* 
-body {
-    background-color: rgb(238, 237, 237);
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    /* min-height: 100vh; *
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 4vw;
-    overflow-x: hidden;
-  }
-  
-  .mainbody {
-    position: relative;
-    width: 100%;
-    /*background-color: yellow;*
-    padding: 0.5rem;
-    overflow: visible;
-  }
-  
-  .mainbody > section {
-    position: relative;
-    font-family: sans-serif;
-    font-size: 1em;
-    margin: 5%;
-    background-color: rgba(37, 204, 37, 0.39);
-    /* background-color: rgb(144, 167, 135); */
-    /* line-height: calc(1.38em);  ---- OH My god that did a lot of damage*
-  } */ 
-  
-  
-
+ */ 
 /*store owners profile and profile box which includes texts*/
+/* 
 #boxBox{
     height : auto;
     width : auto;
@@ -169,6 +226,7 @@ body {
     margin: 0 auto;
 
 } 
+*/ 
   /*working on navigatin buttons
   header{
       width: 100%;
@@ -200,7 +258,7 @@ body {
  /*css for expand */
  .collapsible {
     transition: width 400ms ease-out, height 400ms ease-out;
-    background-color: navy;
+    background-color: #1351d8;
     color: white;
     cursor: pointer;
     border: none;
@@ -219,5 +277,30 @@ body {
     margin: 0 auto;
   }
   
-  
-/*ends here*/
+  /* has to be 15 ot both trigger */
+  @media only screen and (orientation: landscape) and (min-width: 15in) {
+    body{
+        font-size: calc(.7vw + .7vh);
+    }
+    .mainBox{
+        width: 45%;
+        margin: 1% 2.5%;
+        padding: 1%;
+    }
+    .titleBox{
+        padding: 0.5%;
+        background-color: #1351d8;
+    }
+}
+@media only screen and (orientation: landscape) and (min-width:600px)  { 
+    
+    button{
+        background-color: yellow;
+    }
+    button{
+        font-size: large;
+    }
+    a.homeActive{
+        text-decoration:none;
+    }
+}

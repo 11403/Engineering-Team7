@@ -1,16 +1,49 @@
 <html >
-    <head>
-        <title>SWS-Portfolio</title>
-        <link rel="icon" href="images/placeholder.png"><!--tab logo-->
-        <link rel="stylesheet" href="/css/style.css">
-    </head> 
+  <title>Sowards Welding Solutions - Portfolio</title>
+  <link rel="icon" href="images/placeholder.png" />
+  <!--tab logo-->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Put in MetaData here -->
+</head> 
     <body>
-        <a href="index.html">
-            <div class="title" id="title">
-                <span id="pageTitle">SOWARDS WELDING SOLUTIONS</span><br>
-                <span id="location">Central Ohio</span><br>
-                <span id="phoneNumber">000-000-0000</span>
-            </div></a>
+      <main id="mainBody">
+        <div class="titleBox">
+          <h1 id="titleA">SOWARDS WELDING SOLUTIONS</h1>
+          <div class="titleB">
+            <h3>Central Ohio</h3>
+            <h3>000-000-0000</h3>
+          </div>
+        </div>
+        
+
+
+        
+        <div class="bottom"> 
+            <nav class="nav">
+              <input type="button" onclick="location.href='index.html';" value="Home"/>
+              <input type="button" onclick="location.href='portfolio.html';" value="Portfolio"/>
+        </nav>
+          <footer class="bottomBar">
+            <h4>
+              &copy; Copyright 2021-
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              , SOWARD WELDING SOLUTIONS
+            </h4>
+          </footer>
+        </div>
+      </main>
+      
+      
+      <!--
+        <div class="titleBox">
+            <h1 id="titleA">SOWARDS WELDING SOLUTIONS</h1>
+            <div class="titleB">
+              <h3>Central Ohio</h3>
+              <h3>000-000-0000</h3>
+            </div>
+          </div>
         <br>
         
        <div>
@@ -32,11 +65,14 @@
           
         <br>
 
-        <div class="aboutProject">
+        <!--<div class="aboutProject">
             <img src="" alt="" height="100px" width="100px"  class="projectProgressImage">
             <div style="float: right;" width="1340">
                 <span class="projectDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis adipisci, iste soluta quod nam qui tempore eaque. Sequi doloremque, quod ex reiciendis dolorem quidem minima porro vero, sit ab debitis!</span>
             </div>
+        </div>--
+        <div class="aboutProject">
+            
         </div>
         <br>
         <div class="aboutProject">
@@ -49,17 +85,19 @@
             <span class="projectDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis adipisci, iste soluta quod nam qui tempore eaque. Sequi doloremque, quod ex reiciendis dolorem quidem minima porro vero, sit ab debitis!</span>
         </div>
         <br>
-        <header>
-            <div class="bottomNavi">
-                <nav>
-                    <button class="navButton" id="homeLinkButton"><a href="index.html">Home</a></button>
-                    <button class="navButton" id="PortfolioLinkButton"><a href="portfolio.html" class="portfolioActive">Portfolio</a></button>
-                </nav>
-            <div>
-        </header>
-
-        <footer> <small>&copy; Copyright 2018, SOWARD WELDING SOLUTIONS</small> </footer> 
+        <div class="bottom">
+            <nav class="nav">
+                <input type="button" onclick="location.href='index.html';" value="Home"/>
+                <input type="button" onclick="location.href='portfolio.html';" value="Portfolio"/>
+          </nav>
+            <footer class="bottomBar">
+              <h4>&copy; Copyright 2021-<script>document.write(new Date().getFullYear());</script>, SOWARD WELDING SOLUTIONS</h4>
+             
+            </footer>
+          </div>
+          --> 
     </body>
+  
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
