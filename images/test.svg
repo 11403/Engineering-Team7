@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="200" width="400">
+    <path d="M200 0 L0 100 L200 200 L400 100" Fill="rgb(7,106,225)" />
+    <text font-size="60pt" x="115" y="123" fill="white" font-weight="600" font-family="Atkinson Hyperlegible">SWS</text>
+    <line x1="200" x2="20" y1="10" y2="100" style="stroke:#f8fafe;stroke-width:2;"/>
+    <line x1="20" x2="200" y1="100" y2="190" style="stroke:#f8fafe;stroke-width:2;"/>
+    <line x1="200" x2="380" y1="190" y2="100" style="stroke:#f8fafe;stroke-width:2;"/>
+    <line x1="380" x2="200" y1="100" y2="10" style="stroke:#f8fafe;stroke-width:2;"/>
+</svg>
