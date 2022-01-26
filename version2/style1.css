@@ -4,11 +4,11 @@
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
-    overflow: auto; 
+    overflow: auto;
 } 
 
 html {
-    background-color: rgb(247, 0, 255); 
+    background-color: rgb(247, 0, 255);  
 }
 
 body { 
@@ -55,12 +55,13 @@ body {
 }
 
 .mainBody { 
-    background-color: rgb(7, 78, 83);  
-    color: white;  
+    background-color: rgb(255, 255, 255,0);   
+    color: white;
     padding: 5%; 
 }
 
 #profileContainer { 
+   
     padding: 1em; 
     display: flex; 
     flex-flow: row wrap;
@@ -89,7 +90,7 @@ body {
     border-radius: 1.5%;
     width: 10%; 
     flex-grow: 1;
-    flex-basis: 50%; 
+    flex-basis: 25%; 
 }
 
 .subBoxA { 
@@ -101,7 +102,7 @@ body {
     width: 60%; 
     margin: 5% 0 8% 0; 
     left: 20%; 
-    /* don't know a good way to center image so just using another flexbox *
+    /* don't know a good way to center image so just using another flexbox */
 }
 
 .profileImage { 
@@ -129,7 +130,7 @@ body {
  }
 .bottom { 
      background-color: rgba(255, 0, 43, 0.842); 
-    /*height: 12.5%;*
+    /*height: 12.5%;*/
     position: absolute;
     bottom: 0; 
     left: 0; 
@@ -159,18 +160,29 @@ footer.bottomBar {
     position: relative;
     width: 100%;
     padding: 0.5%; 
+    color: white;
     text-align: center;
     font-family: arial;
 }
 
-/* for now *
+/* for now */ 
 ul { 
-    background-color: green; 
-    margin: 2.5rem; 
-    padding: 2.5rem; 
-    display: block; 
-    overflow:visible;
+    margin-left: 10%; 
+    padding-left: 10%; 
+    background-color: green;
+    color: white;  
+    overflow: visible; 
 }
+/* 
+.mainBox:hover{
+    background-color: #427cf8; 
+    box-shadow: 0 5px 10px black;
+    color:whitesmoke;
+    
+    transition: 1s;
+  }
+  
+/* 
 
 /*  //// if positioned with absolute or fixed //// *
  
@@ -323,7 +335,7 @@ a:hover{
     margin: 0 auto;
   }
   
-  /* has to be 15 ot both trigger *
+  /* has to be 15 ot both trigger */
   @media only screen and (orientation: landscape) and (min-width: 15in) {
     body{
         font-size: calc(.7vw + .7vh);
@@ -334,11 +346,18 @@ a:hover{
         padding: 1%;
     }
     .titleBox{
+        font-size: 14pt;
         padding: 0.5%;
-        background-color: gray;
+        background-color: lime;
+    }
+    .titleB{
+        display: inline;
     }
     .profileImage{
         width: 50%;
+    }
+    .button{
+
     }
 }
 @media only screen and (orientation: landscape) and (min-width:600px)  { 
@@ -353,5 +372,5 @@ a:hover{
         text-decoration:none;
     }
 }
-*/ 
+
 
