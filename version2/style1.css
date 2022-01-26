@@ -1,17 +1,14 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 
 * { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
-    /* overflow: auto; */ 
-    
-}
+    overflow: auto; 
+} 
 
 html {
-    background-color: lightpink; 
+    background-color: rgb(247, 0, 255); 
 }
 
 body { 
@@ -22,63 +19,54 @@ body {
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    /*background-image: url("https://images.pexels.com/photos/1555177/pexels-photo-1555177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") ;  */
+    /*
+    background-image: url("https://images.pexels.com/photos/1555177/pexels-photo-1555177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") ;  
     background-repeat: no-repeat;
      background-attachment: fixed;
     background-position: center; 
+    */
 }
-
+ 
 .titleBox{
-    /*background-color: #1351d8;*/
-    background-image: url("https://images.pexels.com/photos/1555177/pexels-photo-1555177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") ;
+    background-color: rgba(0, 0, 0, 0.767); 
+    /*background-color: #1351d8;
+     background-image: url("https://images.pexels.com/photos/1555177/pexels-photo-1555177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); 
     -ms-background-position-x: center;
     -ms-background-position-y: bottom;
-    background-position: center bottom;
+    background-position: center bottom;*/
     width: 100%;
     color:whitesmoke; 
     text-align: center;
+    padding: .65%; 
     
     /* 1em = 100% */ 
     /* text-shadow: 0.02em 0.02em orange; // for pc view*/
 }
 
-
-
-
-/* 
-#titleA:hover{
-    cursor: pointer;
-    color:white;
-    text-shadow: 3px 1px black;
-    transition: 2s;
-}
-*/ 
-
 .titleA { 
-    font-weight: 600;
-    font-size: 1.30em;
+    font-weight: 800;
+    font-size: 1.8em;
 }
 
 .titleB { 
     font-weight: 300; 
-    font-size: 1.15em;
+    font-size: 1.65em;
     display: inline-block;
 }
 
 .mainBody { 
-    background-color: rgb(255, 255, 255,0);   
-    color: white;
+    background-color: rgb(7, 78, 83);  
+    color: white;  
     padding: 5%; 
 }
 
 #profileContainer { 
-   
     padding: 1em; 
     display: flex; 
     flex-flow: row wrap;
     /* flex-direction: column;
     flex-wrap: wrap; */ 
-    gap: 1em; /* gap: row-gap collum gap */ 
+    gap: 1em; /* gap: row-gap collum gap */
     align-content: space-around;
     justify-content: space-evenly;
     align-items: stretch;
@@ -93,7 +81,6 @@ body {
     flex-basis: 100%; 
 }*/
  
-
 .profileBox { 
     background-color: rgba(0, 0, 0, 0.8);  
     padding: 1em; 
@@ -102,8 +89,7 @@ body {
     border-radius: 1.5%;
     width: 10%; 
     flex-grow: 1;
-    flex-basis: 25%; 
-    
+    flex-basis: 50%; 
 }
 
 .subBoxA { 
@@ -111,12 +97,11 @@ body {
     display: flex; 
     position: relative;
     align-content: center;
-    
     justify-content: center;
     width: 60%; 
     margin: 5% 0 8% 0; 
     left: 20%; 
-    /* don't know a good way to center image so just using margins */ 
+    /* don't know a good way to center image so just using another flexbox *
 }
 
 .profileImage { 
@@ -135,13 +120,16 @@ body {
     text-indent: 5%;
     padding: 0 2%; 
     margin: 2% 0; 
-    
+    text-align: left;
 }
 
-
+ #services { 
+     background-color: orange; 
+     margin: 5%; 
+ }
 .bottom { 
-     
-    /*height: 12.5%;*/
+     background-color: rgba(255, 0, 43, 0.842); 
+    /*height: 12.5%;*
     position: absolute;
     bottom: 0; 
     left: 0; 
@@ -175,7 +163,7 @@ footer.bottomBar {
     font-family: arial;
 }
 
-/* for now */ 
+/* for now *
 ul { 
     background-color: green; 
     margin: 2.5rem; 
@@ -183,6 +171,17 @@ ul {
     display: block; 
     overflow:visible;
 }
+
+/*  //// if positioned with absolute or fixed //// *
+ 
+.spacer { 
+    position: relative; 
+    width: 100%; 
+    height: 4%; 
+    z-index: -1;
+}
+
+/* //////////////////////// Hover Effects /////////////////////// */ 
 /* 
 .mainBox:hover{
     background-color: #427cf8; 
@@ -191,17 +190,20 @@ ul {
     
     transition: 1s;
   }
-  
-/* 
 
-/*  //// if positioned with absolute or fixed //// *
-.spacer { 
-    position: relative; 
-    width: 100%; 
-    height: 4%; 
-    z-index: -1;
+#titleA:hover{
+    cursor: pointer;
+    color:white;
+    text-shadow: 3px 1px black;
+    transition: 2s;
 }
 
+
+*/ 
+
+
+
+/* 
 .projectBox { 
     background-color: rgba(255, 0, 0, 0.432);
 }
@@ -321,7 +323,7 @@ a:hover{
     margin: 0 auto;
   }
   
-  /* has to be 15 ot both trigger */
+  /* has to be 15 ot both trigger *
   @media only screen and (orientation: landscape) and (min-width: 15in) {
     body{
         font-size: calc(.7vw + .7vh);
@@ -351,5 +353,5 @@ a:hover{
         text-decoration:none;
     }
 }
-
+*/ 
 
