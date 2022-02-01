@@ -1,20 +1,22 @@
-<html >
-  <title>Sowards Welding Solutions - Portfolio</title>
-  <link rel="icon" href="images/placeholder.png" />
-  <!--tab logo-->
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Put in MetaData here -->
-</head> 
-    <body>
-      <main class="mainBody">
-        <div class="titleBox">
-          <h1 id="titleA">SOWARDS WELDING SOLUTIONS</h1>
-          <div class="titleB">
-            <h3>Central Ohio</h3>
-            <h3>000-000-0000</h3>
-          </div>
-        </div>
-       <div class="projectBox"> 
+<html>
+<title>Sowards Welding Solutions - Portfolio</title>
+<link rel="icon" href="images/placeholder.png" />
+<!--tab logo-->
+<link rel="stylesheet" href="style1.css" />
+<!-- Put in MetaData here -->
+</head>
+
+<body>
+
+  <div class="titleBox">
+    <h1 class="titleA">SOWARDS WELDING SOLUTIONS</h1>
+    <div class="titleB">
+      <h3>Central Ohio</h3>
+      <h3 class="phone">(304)-840-2130</h3>
+    </div>
+  </div>
+  <!--<main class="mainBody">
+       <div class="portfolioBox"> 
         <div class="shown">
           <img src="/images/placeholder.png" alt="" height="50px" width="50px">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor in</p>
@@ -62,27 +64,62 @@
             <span class="projectDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis adipisci, iste soluta quod nam qui tempore eaque. Sequi doloremque, quod ex reiciendis dolorem quidem minima porro vero, sit ab debitis!</span>
         </div>
         <br>
-      --> 
-        <div class="bottom"> 
-            <nav class="nav">
-              <input type="button" onclick="location.href='index.html';" value="Home"/>
-              <input type="button" onclick="location.href='portfolio.html';" value="Portfolio"/>
-        </nav>
-          <footer class="bottomBar">
-            <h4>
-              &copy; Copyright 2021 -
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              SOWARD WELDING SOLUTIONS
-            </h4>
-          </footer>
-        </div>
-        <div class="spacer"></div>
-      </main>
-      
-      
-      <!--
+      -->
+  <div class="gallery">
+    <div class="galleryBox">
+        <img src="/images/portfolio/port1.jpg" alt="Cinque Terre" width="600" height="600">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+    <div class="galleryBox">
+        <img src="/images/portfolio/port2.jpg" alt="Cinque Terre" width="600" height="600">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+    <div class="galleryBox">
+        <img src="/images/portfolio/port3.jpg" alt="Cinque Terre" width="600" height="600">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+    <div class="galleryBox">
+        <img src="/images/portfolio/port4.jpg" alt="Cinque Terre" width="600" height="600">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+    <div class="galleryBox">
+        <img src="/images/portfolio/port5.jpg" alt="Cinque Terre" width="600" height="600">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+    <div class="galleryBox">
+        <img src="/images/portfolio/port6.jpg" alt="Cinque Terre" width="600" height="600">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+  </div>
+
+
+
+  <div class="bottom">
+    <nav class="nav">
+      <input type="button" onclick="location.href='index.html';" value="Home" />
+      <input type="button" onclick="location.href='portfolio.html';" value="Portfolio" />
+    </nav>
+    <footer class="bottomBar">
+      <h4>
+        &copy; Copyright 2021 -
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        SOWARD WELDING SOLUTIONS
+      </h4>
+    </footer>
+  </div>
+  <div class="spacer"></div>
+  </main>
+
+
+  <!--
         <div class="titleBox">
             <h1 id="titleA">SOWARDS WELDING SOLUTIONS</h1>
             <div class="titleB">
@@ -141,24 +178,25 @@
              
             </footer>
           </div>
-          --> 
-    </body>
-  
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-        
-        for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
-            }
-          });
-        }
-        </script> 
+          -->
+</body>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
+
 </html>

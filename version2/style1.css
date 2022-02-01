@@ -9,44 +9,41 @@
 } 
 
 html {
-    background-color: rgb(247, 0, 255);  
+    background-color: none;
     overflow: auto; 
 }
 
 body { 
-    background-color: rgb(71, 94, 71); 
     font-family: 'Atkinson Hyperlegible', sans-serif;
     font-size: calc(1vw + 0.8vh);
-    /* font-weight: 500; */ 
     width: 100vw;
     max-width: 100%;
     height: 100vh;
     overflow: auto; 
-    /*
-    background-image: url("https://images.pexels.com/photos/1555177/pexels-photo-1555177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") ;  
-    background-repeat: no-repeat;
-     background-attachment: fixed;
-    background-position: center; 
-    */
 }
  
 .titleBox{
-    /*background-color: #1351d8;
-     background-image: url("https://images.pexels.com/photos/1555177/pexels-photo-1555177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); 
-    -ms-background-position-x: center;
-    -ms-background-position-y: bottom;
-    background-position: center bottom;*/
     background-color: #406882;
     width: 100%;
+    margin: 0 auto;
     color:whitesmoke; 
     text-align: center;
     padding: .65%; 
+    animation-name: colorchange;
+    animation-duration:  5s;
+   
     /* 1em = 100% */ 
     /* text-shadow: 0.02em 0.02em orange; // for pc view*/
 }
+@keyframes colorchange {
+    0%   {background-color: rgb(0, 174, 255);}
+    25%  {background-color: rgb(0, 255, 191);}
+    50%  {background-color: rgb(0, 174, 255);}
+    100% {background-color:  #406882;}
+  }
 
 .titleA { 
-    /* font-weight: 800; */ 
+    font-weight: 800; 
     font-size: 1.8em;
 }
 
@@ -57,13 +54,12 @@ body {
 }
 
 .mainBody { 
-    background-color: #6998AB;  
-    color: white;
+    background-color: rgb(243, 237, 237)/*#6998AB*/;  
+    color: rgb(255, 255, 255);
     padding: 5%; 
 }
 
 #profileContainer { 
-    padding: 1em; 
     display: flex; 
     flex-flow: row wrap;
     /* flex-direction: column;
@@ -72,6 +68,8 @@ body {
     align-content: space-around;
     justify-content: space-evenly;
     align-items: stretch;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65), 0 6px 20px 0 rgba(0, 0, 0, 0.65);
+    background-color: none;
 }
 
 /* used to test flexbox */ 
@@ -84,8 +82,8 @@ body {
 }*/
  
 .profileBox { 
-    background-color: #406882;
     padding: 1em; 
+    background-color: #406882;
     /* display: inline-block; ///////// I actually need this? */ 
     position: relative; 
     border-radius: 1.5%;
@@ -96,7 +94,7 @@ body {
 }
 
 .profileBox:hover {
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65), 0 6px 20px 0 rgba(0, 0, 0, 0.65);
     background-color: #397288;
     transition:  0.3s ease-in-out;
     transform: rotate(1.5deg);
@@ -141,11 +139,27 @@ body {
 } 
 
  #services { 
-     background-color: rgba(255, 166, 0, 0.26); 
+     background-color: #2380A5; 
      margin: 2.5% 0; 
+     padding: 1em; 
+     border-radius: 1.5%;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65), 0 6px 20px 0 rgba(0, 0, 0, 0.65);
+ }
+ .ServicesList{
+    transition:  0.3s ease-in-out;
+ }
+ .ServicesList:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65), 0 6px 20px 0 rgba(0, 0, 0, 0.65);
+    transition:  0.3s ease-in-out;
+    transform: rotate(1.5deg);
+
  }
 
- 
+ .subTitleB { 
+     font-size: 0.65em; 
+     font-weight:600; 
+     margin: 5% 1.5%; 
+ }
 ul { 
     margin-left: 10%; 
     padding-left: 10%; 
@@ -158,7 +172,7 @@ ul {
 .spacer { 
     position: relative; 
     width: 100%; 
-    height: 6.5rem;  
+    height: 8rem;  
     z-index: -1;
 }
 
@@ -169,6 +183,7 @@ ul {
     bottom: 0; 
     left: 0; 
     width: 100%; 
+    
 }
 
 .nav { 
@@ -198,11 +213,12 @@ footer.bottomBar {
 }
 
 input{
-    background-color:#1A374D;
+    background-color:#406882;
     color: white;
     border: none;
     border-radius: 5px;
     transition:  0.3s ease-in-out;
+    
     
 }
 input:hover{
@@ -213,175 +229,23 @@ input:hover{
     
    
 }
-/* 
-.mainBox:hover{
-    background-color: #427cf8; 
-    box-shadow: 0 5px 10px black;
-    color:whitesmoke;
-    
-    transition: 1s;
-  }
-  
-/* 
 
-/*  //// if positioned with absolute or fixed //// *
- 
-
-
-/* //////////////////////// Hover Effects /////////////////////// */ 
-/* 
-.mainBox:hover{
-    background-color: #427cf8; 
-    box-shadow: 0 5px 10px black;
-    color:whitesmoke;
-    
-    transition: 1s;
-  }
-
-#titleA:hover{
-    cursor: pointer;
-    color:white;
-    text-shadow: 3px 1px black;
-    transition: 2s;
-}
-
-
-*/ 
-
-
-
-/* 
-.projectBox { 
-    background-color: rgba(255, 0, 0, 0.432);
-}
-
-/* 
-header{
-    width: 100%;
-    background-color: orange;
-}
-nav{
-    background-color: orange;
-}
-
-button{
-    height: 3.8em;
-    width: 5.5em;
-    border:none;
-    background-color: white;
-    margin-left: 30% ;
-   
-}
-.navbutton:hover{
-   background-color: navy;
-   color: white;
-   
-}
-a.portfolioActive{
-    font-weight: bold;
-    font-style: italic;
-}
-a.homeActive{
-    font-weight: bold;
-    font-style: italic;
-}
-a{
-   
-    text-decoration: none;
-}
-a:hover{
-    color: white;
-}
- */ 
-/*store owners profile and profile box which includes texts*/
-/* 
-#boxBox{
-    height : auto;
-    width : auto;
-    background-color: whitesmoke;
-    text-overflow: break;
-}
-#profileOne {
-    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
-    margin: 0 auto;
-
-} 
-
-#boxTwo{
-    height : auto;
-    width : auto;
-    background-color: whitesmoke;
-    text-overflow: break;
-}
-#profileTwo {
-    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;    
-    margin: 0 auto;
-
-} 
-*/ 
-  /*working on navigatin buttons
-  header{
-      width: 100%;
-      background-color: orange;
-  }
-  button{
-      background-color: white;
-      border: none;
-      color: black;
-      height: max-height;
-      borderborder-radius: 5px;
-  }
-  */
-  
-  /*working on porfolio page services description *
-  .aboutProject{
-      background-color: whitesmoke;
-      border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
- 
-    }
- .projectProgressImage{
-     border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
-     border: none;
- }
- button.navButton{
-    color: aqua;
- }
-
-
- /*css for expand *
- .collapsible {
-    transition: width 400ms ease-out, height 400ms ease-out;
-    background-color: #1351d8;
-    color: white;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    width:100%;
-    margin: 0 auto;
-   
-  }
-  .collapsible:hover{
-      font-size: medium;
-  }
-  .content {
-    transition: height 400ms ease-in, height 400ms ease-in;
-    overflow: hidden;
-    background-color: #f1f1f1;
-    margin: 0 auto;
-  }
-  
   /* has to be 15 ot both trigger */
   @media only screen and (orientation: landscape) and (min-width: 15in) {
+    
     body{
         font-size: calc(.7vw + .7vh);
+        
     }
     .mainBox{
         width: 45%;
         margin: 1% 2.5%;
         padding: 1%;
+        
     }
     .titleBox{
         font-size: 14pt;
+        width: 100%;
         padding: 0.5%;
         background-color: #406882;
     }
@@ -389,18 +253,41 @@ a:hover{
         width: 50%;
     }
     .nav > input{
-        padding: 1%;
+        padding: 0.5%;
         width: 20%;
         border-radius: 5px;
         border: none;
+        font-size: calc(0.8vw + 0.7vh);
+    }
+    .nav{
+        padding: .5%;
     }
     .nav > input:hover{
         
-        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+        box-shadow: 0 4px 8px 0 rgba(124, 124, 124, 0.418), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
     background-color: #397288;
     transition:  0.3s ease-in-out;
-    
-        
+    border-radius: 15%;
+    }
+    .profileBox{
+        flex-grow: 0.25;
+        flex-basis: calc(25% - 1em); 
+    }   
+    #profileContainer { 
+     /*    width: 50%; */ 
+     background-color: rgb(35, 128, 165); 
+     padding: 2%; 
+     width: 60%; 
+     position: relative; 
+     left: 20%; 
+     border-radius: 1.5%;
+    }
+    .bottomBar{
+        font-size: calc(0.5vw + 0.4vh);
+
+    }
+    .titleBox{
+        font-size: calc(0.5vw + 0.4vh);
     }
     
 }
@@ -420,9 +307,58 @@ a:hover{
     user-select: text;
 }
 
-.phone::selection { 
-    background-color: purple;
-    color: rgb(9, 255, 0); 
-}
+div.gallery {
+    /* 
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 360;
+    margin: 0 auto;
+    border: 1px solid whitesmoke;
+    */ 
+    background-color: white; 
+    width:100%; 
+    padding: 5%; 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em; 
+    
+  }
+  .galleryBox { 
+      background-color: whitesmoke;
+      padding: 5%;
+      border-radius:1%; 
+  }
+  .gallery > img { 
+      width: 80%;
+      height: 10%;  
+  }
+  div.gallery:hover {
+    transition: 0.5s;
 
-
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+    
+   
+   
+  }
+  div.gallery img:hover{
+    opacity:90%;
+    transition: 0.5s;
+    
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    border: none;
+    background-color: white;
+  }
+  div.desc:hover{
+      transition: 0.5s;
+  }
