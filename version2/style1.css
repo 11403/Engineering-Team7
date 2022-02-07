@@ -150,18 +150,24 @@ a.infolinks:hover{
     text-decoration: underline;
     font-weight: bold; 
     margin: 2.5%; 
-    font-size: 1.25em;
+    font-size: 1em;
     font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
  #services { 
-     background-color: #2380A5; 
+    background-color: #406882;
      margin: 2.5% 0; 
      padding: 1em; 
      border-radius: 1.5%;
      transition:  0.3s ease-in-out;
-     
  }
+
+ #services > div { 
+    background-color: #4891ad;
+    border-radius: 1.5%; 
+    padding: 1.5%; 
+    font-size: 1.1em; 
+}
 
  #services:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65), 0 6px 20px 0 rgba(0, 0, 0, 0.65);
@@ -171,9 +177,13 @@ a.infolinks:hover{
  }
 
 ul { 
+    display: inline-block; 
+    padding: 1% 1.5%; 
+    margin: 1.25%; 
+    border-radius: 1.5%;
     margin-left: 10%; 
-    padding-left: 10%; 
-    background-color: #406882;
+    padding-left: 10%;
+    background-color: #2380A5; 
     color: white;  
     overflow: visible; 
     border-radius: 1.5%;;
@@ -240,87 +250,34 @@ input:hover{
    
 }
 
-  /* has to be 15 ot both trigger */
-  @media only screen and (orientation: landscape) and (min-width: 15in) {
-    
-    body{
-        font-size: calc(.7vw + .7vh);
-        
+
+@media only screen and (orientation: landscape) and (max-width: 12in)  { 
+
+    #services, #profileContainer { 
+        width: 80%;
+        position: relative;
+        left: 10%; 
     }
-    .mainBox{
-        width: 45%;
-        margin: 1% 2.5%;
-        padding: 1%;
-        
+
+    .nav{
+        width: 100%; 
+        padding: 1%; 
     }
-    .titleBox{
-        font-size: 14pt;
-        width: 100%;
-        padding: 0.5%;
-        background-color: #406882;
-    }
-    .profileImage{
-        width: 50%;
-    }
+
     .nav > input{
-        padding: 0.5%;
-        width: 20%;
+        height: 1%; 
         border-radius: 5px;
         border: none;
-        font-size: calc(0.8vw + 0.7vh);
+        font-size: 1.1em;
         background-color: #4ca0c2;
+        padding: 1.5%;
+        width: 30%; 
     }
-    .nav{
-        padding: .5%;
-    }
-    .nav > input:hover{
-        
-    box-shadow: 0 4px 8px 0 rgba(124, 124, 124, 0.418), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-    background-color: #50acd1;
-    transition:  0.3s ease-in-out;
-    border-radius: 15%;
-    }
-    .profileBox{
-        flex-grow: 0.25;
-        flex-basis: calc(25% - 1em); 
-    }   
-    #profileContainer { 
-     /*    width: 50%; */
-     background-color: rgb(35, 128, 165); 
-     padding: 2%; 
-     width: 60%; 
-     position: relative; 
-     left: 20%; 
-     border-radius: 1.5%;
-     transition:  0.3s ease-in-out;
-    }
-    #profileContainer:hover{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65), 0 6px 20px 0 rgba(0, 0, 0, 0.65);
-        transition:  0.3s ease-in-out;
-    }
-    .bottomBar{
-        font-size: calc(0.5vw + 0.4vh);
-
-    }
-    .titleBox{
-        font-size: calc(0.5vw + 0.4vh);
+     
+    .spacer { 
+        height: 4rem; 
     }
 
-    .galleryBox { 
-        width: 35%; 
-    }
-    
-}
-
-
-@media only screen and (orientation: landscape) and (min-width:600px)  { 
-    
-    button{
-        background-color: yellow;
-    }
-    button{
-        font-size: large;
-    }
     a.homeActive{
         text-decoration:none;
     }
@@ -352,6 +309,7 @@ div.gallery {
       background-color: whitesmoke;
       padding: 5%;
       border-radius:1%; 
+      width: 60%;
   }
   .gallery > img { 
       width: 80%;
@@ -384,3 +342,82 @@ div.gallery {
   div.desc:hover{
       transition: 0.5s;
   }
+
+  
+  /* has to be 15 ot both trigger */
+  @media only screen and (orientation: landscape) and (min-width: 15in) {
+
+    
+    body{
+        font-size: calc(.6vw + .8vh);
+        
+    }
+
+ #services, #profileContainer { 
+        width: 50%;
+        position: relative;
+        left: 25%; 
+    }
+
+    .titleBox{
+        font-size: 0.9em;
+        width: 100%;
+        padding: 0.5%;
+        background-color: #406882;
+    }
+
+    .profileImage{
+        width: 75%;
+    }
+
+    .nav{
+        width: 100%; 
+        padding: 1%; 
+    }
+
+    .nav > input{
+        height: 1%; 
+        border-radius: 5px;
+        border: none;
+        font-size: 1.1em;
+        background-color: #4ca0c2;
+        padding: 1%;
+        width: 30%; 
+    }
+     
+    .spacer { 
+        height: 5rem; 
+    }
+    .galleryBox { 
+        width: 40%; 
+    }
+    /* 
+    .profileBox{
+        flex-grow: 0.25;
+        flex-basis: calc(25% - 1em); 
+    }   
+    #profileContainer { 
+     /*    width: 50%; *
+     background-color: rgb(35, 128, 165); 
+     padding: 2%; 
+     width: 60%; 
+     position: relative; 
+     left: 20%; 
+     border-radius: 1.5%;
+     transition:  0.3s ease-in-out;
+    }
+    #profileContainer:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65), 0 6px 20px 0 rgba(0, 0, 0, 0.65);
+        transition:  0.3s ease-in-out;
+    }
+    .bottomBar{
+        font-size: calc(0.5vw + 0.4vh);
+
+    }
+    .titleBox{
+        font-size: calc(0.5vw + 0.4vh);
+    }
+
+    
+    */ 
+}
